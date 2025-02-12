@@ -16,7 +16,7 @@ pub fn handle_connection(mut stream: TcpStream) {
         "GET / HTTP/1.1" => ("HTTP/1.1 200 OK", "public/index.html"),
         "GET /page HTTP/1.1" => ("HTTP/1.1 200 OK", "public/page.html"),
         "GET /slow HTTP/1.1" => {
-            thread::sleep(Duration::from_secs(3));
+            thread::sleep(Duration::from_secs(10));
             ("HTTP/1.1 200 OK", "public/slow.html")
         }
         _ => ("HTTP/1.1 404 NOT FOUND", "public/404.html"),
