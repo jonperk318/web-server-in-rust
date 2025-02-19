@@ -18,7 +18,10 @@ cd web-server-in-rust
 cargo run
 ```
 Open [http://localhost:8080](http://localhost:8080) with a web browser to see the result.
+
+
 ![demo.png](./demo.png)
+
 
 ## Test the Server
 Test the capabilities of the server with `curl`
@@ -33,5 +36,6 @@ Use the below command to get a 404.
 ```bash
 curl -v localhost:3000/asdfghjkl
 ```
+
 
 Finally, stop the server with `Ctrl+C`

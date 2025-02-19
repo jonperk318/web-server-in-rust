@@ -13,7 +13,6 @@ fn main() {
     for stream in listener.incoming().take(100) {
 
         let stream = stream.unwrap();
-
         pool.execute(|| {
             connection::handle_connection(stream);
         });
