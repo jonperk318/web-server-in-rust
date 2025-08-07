@@ -1,5 +1,5 @@
 # Web Server in Rust
-This is a multi-threaded web server built in Rust. Test it locally by following the instructions below.
+This is a multi-threaded web server built in Rust that can handle multiple concurrent requests. Test it locally by following the instructions below:
 
 ## Setup
 Install Rust
@@ -17,22 +17,24 @@ Run using Cargo
 cd web-server-in-rust
 cargo run
 ```
-Open [http://localhost:8080](http://localhost:8080) with a web browser to see the result.
+Open [http://localhost:8080](http://localhost:8080) with a web browser, and the following page should appear:
 
 
 ![demo.png](./demo.png)
 
 
+Explore the links to test different pages of the web server.
+
+
 ## Test the Server
-Test the capabilities of the server with `curl`
-```bash
-curl -v localhost:8080/
-```
-Using two terminal processes, spam the command above after executing the command below. This should work up to 100 requests due to multi-threading.
+Test the capabilities of the server with `curl`. Execute the first command in one terminal window and open up a second window to test the second command. Due to multi-threading, the server can handle up to 100 simultaneous requests.
 ```bash
 curl -v localhost:8080/slow
 ```
-Use the below command to get a 404.
+```bash
+curl -v localhost:8080/
+```
+Use the below command to see a 404 page.
 ```bash
 curl -v localhost:3000/asdfghjkl
 ```
